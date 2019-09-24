@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    
+    <meta name="theme-color" content="#0f0f0f"/>            <!--Color Mobile Bar (Address Bar) same color as header-->
+    <meta name="viewport" content="user-scalable=0, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    <meta name="apple-mobile-web-app-capable" content="yes"><!--Applicable for "App-Shortcut on iOS (Homescreen Application-->
+    <meta name="mobile-web-app-capable" content="yes">      <!--Applicable for "App-Shortcut on Android (Homescreen Application-->
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp" crossorigin="anonymous"></script>
+
+    <title>simpleOCR</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row text-center mt-5">
+          <div class="col-12 text-center my-3">
+            <h3>Welcome to simpleOCR v0.1</h3>            
+            <form action="/preview" method="POST" enctype="multipart/form-data" hidden>
+              <input 
+                type="file" 
+                id="pictureInput"
+                accept="image/*;capture=camera" 
+                onchange="submitForm();"
+                name="userPicture"
+              />
+        
+              <button type="submit" id="formSubmitButton"></button>
+            </form>
+          </div>
+        </div>
+
+        <div class="row my-2">
+          <div class="col-12 text-center">
+              <div class="col-4 mx-auto" id="takePictureIcon" onclick="selectFileForInput();"></div>
+          </div>
+        </div>
+      </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
